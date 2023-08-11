@@ -135,56 +135,55 @@ https://www.kaggle.com/datasets/michaeljkerr/20k-album-covers-within-20-genres
 
 The CSV file containing file paths and genres associated with the album cover images are found in the application. The file path should be relative to the location of the CSV file.
 
-Data Product Code
 
+### Data Product Code
 
 
 **Processing raw data:**
 
-The raw data consists of album cover images.
+   * The raw data consists of album cover images.
 
-The code preprocesses the raw images by resizing them to a specific dimension, normalizing the pixel values, and flattening them into a feature vector.
+   * The code preprocesses the raw images by resizing them to a specific dimension, normalizing the pixel values, and flattening them into a feature vector.
 
-This processing step is necessary to ensure consistent input dimensions for the machine learning model and to transform the image data into a suitable format for classification.
+   * This processing step is necessary to ensure consistent input dimensions for the machine learning model and to transform the image data into a suitable format for classification.
 
 
 
 **Descriptive methods and visualizations:**
 
-The code includes several descriptive methods and visualizations:
+   * The code includes several descriptive methods and visualizations:
 
-Bar Plot for Genre Distribution: Visualizes the distribution of genres in the dataset.
+   * Bar Plot for Genre Distribution: Visualizes the distribution of genres in the dataset.
 
-Confusion Matrix: Visualizes the performance of the classification model by showing the predicted versus true genre labels.
+   * Confusion Matrix: Visualizes the performance of the classification model by showing the predicted versus true genre labels.
 
-Precision-Recall Curve: Plots the precision-recall curves for each genre, providing insights into the model's performance for different classification thresholds.
+   * Precision-Recall Curve: Plots the precision-recall curves for each genre, providing insights into the model's performance for different classification thresholds.
 
 
 
 **Non-descriptive method(s):**
 
-The non-descriptive method applied is a Random Forest classifier.
+   * The non-descriptive method applied is a Random Forest classifier.
 
-Random Forest is an ensemble learning method that combines multiple decision trees to make predictions. It is appropriate for this project because it can handle multi-class classification tasks, handle high-dimensional feature vectors, and has the potential to capture complex relationships between album cover images and music genres.
+   * Random Forest is an ensemble learning method that combines multiple decision trees to make predictions. It is appropriate for this project because it can handle multi-class classification tasks, handle high-dimensional feature vectors, and has the potential to capture complex relationships between album cover images and music genres.
 
-The Random Forest classifier is trained using the preprocessed image data and the corresponding genre labels. It is then tested on the testing subset of the dataset.
+   * The Random Forest classifier is trained using the preprocessed image data and the corresponding genre labels. It is then tested on the testing subset of the dataset.
 
-The evaluation metrics (accuracy, precision, recall, F1 score) are calculated to assess the performance of the Random Forest model.
+   * The evaluation metrics (accuracy, precision, recall, F1 score) are calculated to assess the performance of the Random Forest model.
 
 
 
 The data analysis supports the choice and improvement of descriptive and non-descriptive methods in the following ways:
 
-Descriptive methods and visualizations provide insights into the dataset's characteristics and distribution of genres, helping to understand the data's structure and make informed decisions during model selection and evaluation.
+   * Descriptive methods and visualizations provide insights into the dataset's characteristics and distribution of genres, helping to understand the data's structure and make informed decisions during model selection and evaluation.
 
-The confusion matrix visualizes the model's performance, highlighting potential misclassifications and areas for improvement.
+   * The confusion matrix visualizes the model's performance, highlighting potential misclassifications and areas for improvement.
 
-The precision-recall curve provides a more detailed analysis of the model's performance, particularly for imbalanced classes, and helps in setting an appropriate classification threshold.
+   * The precision-recall curve provides a more detailed analysis of the model's performance, particularly for imbalanced classes, and helps in setting an appropriate classification threshold.
 
 
 
 **Objective (or Hypothesis) Verification**
-
 
 
 The project's objective was to develop a music genre classification application based on album cover images and achieve a certain level of accuracy.
@@ -222,3 +221,15 @@ The descriptive methods and visualizations played a crucial role in supporting t
     * The precision-recall curve plotted the precision and recall values for different classification thresholds. It provided insights into the trade-off between precision (the ability to correctly identify positive cases) and recall (the ability to capture all positive cases). The curve showed the performance of the model for each genre, allowing for a comparison of their precision-recall characteristics. 
 
     ![Precision Recall Curve](Data_Images/precision-recall_curve.png?raw=true "Precision Recall Curve")
+
+These visualizations helped in understanding the dataset, analyzing the model's performance, and making informed decisions regarding improvements to the non-descriptive methods. They provided a visual representation of key metrics and patterns, aiding in the interpretation and evaluation of the results. 
+
+## Accuracy Analysis  
+
+The metric used to assess the model's performance is accuracy. Accuracy measures the proportion of correctly classified samples out of the total number of samples in the dataset. It provides an overall measure of how well the model is able to predict the correct genre for album covers. 
+
+In the provided example, the accuracy score is reported as 0.2318, which indicates that the model achieved an accuracy of approximately 23.18%. This means that the model correctly classified about 23.18% of the album covers in the test dataset. 
+
+![Accuracy Analysis](Data_Images/accuracy.png?raw=true "Accuracy Analysis")
+
+To improve accuracy and evaluate the model more thoroughly, future project developments could consider cross-validation, ensemble methods, hyperparameter tuning, and data augmentation. 
