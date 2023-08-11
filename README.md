@@ -4,7 +4,7 @@ The objective of this project is to develop a machine learning solution that can
 deep learning techniques and neural networks, the program is trained to analyze visual patterns and features in album
 covers to determine the most suitable genre.
 
-![Genre Predictor](Data_Images/genre-predictor.avif?raw=true "Album Cover Genre Predictor")
+![Genre Predictor](Data_Images/genre-predictor.webp?raw=true "Album Cover Genre Predictor")
 
 
 ## How to Run
